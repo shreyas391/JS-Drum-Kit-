@@ -4,13 +4,14 @@ for (i=0; i<=6; i++) {
 
   var Innerhtml = this.innerHTML
   makesound(Innerhtml)
-  buttonanime(Innerhtml);
+  buttonanime(Innerhtml)
+
   }); 
 }
 
 document.addEventListener("keypress", function(event) {
-    makesound(event.key);
-    buttonanime(event.key);
+    makesound(event.key)
+    buttonanime(event.key)
 })
 
 function makesound(key) {
