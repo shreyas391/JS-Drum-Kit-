@@ -4,12 +4,13 @@ for (i=0; i<=6; i++) {
 
   var Innerhtml = this.innerHTML
   makesound(Innerhtml)
-
+  buttonanime(Innerhtml);
   }); 
 }
 
 document.addEventListener("keypress", function(event) {
-    makesound(event.key)
+    makesound(event.key);
+    buttonanime(event.key);
 })
 
 function makesound(key) {
@@ -52,4 +53,13 @@ function makesound(key) {
     default: console.log(key)
 
   }
+}
+
+function buttonanime(currentkey) {
+  var activekey = document.querySelector("." + currentkey);
+  activekey.classList.add("pressed");
+
+  setTimeout(function() {
+    activekey.classList.remove("pressed");
+  }, 150)
 }
